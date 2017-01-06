@@ -128,7 +128,7 @@ func run(ui ui) time.Time {
 		start := time.Now()
 		if err := cmd.Start(); err != nil {
 			io.WriteString(out, "fatal: "+err.Error()+"\n")
-			os.Exit(1)
+			return
 		}
 		if s := wait(start, cmd); s != 0 {
 			io.WriteString(out, "exit status "+strconv.Itoa(s)+"\n")
