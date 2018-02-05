@@ -24,7 +24,7 @@ jobs:
       - run: go get -u github.com/golang/dep/cmd/dep
       - run: dep ensure
       - run: go build
-      - run: docker build -t quay.io/weaveworks/watch -t quay.io/weaveworks/watch-$(./image-tag) .
+      - run: docker build -t quay.io/weaveworks/watch -t quay.io/weaveworks/watch:$(./image-tag) .
       - deploy:
           name: push image
           command: |
