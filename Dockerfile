@@ -1,5 +1,4 @@
-FROM alpine:3.4
-RUN apk add --update curl && \
-	rm -rf /var/cache/apk/*
+FROM alpine:3.7
+RUN apk add --no-cache curl
 ADD Watch /
 ENTRYPOINT ["/Watch"]

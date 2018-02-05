@@ -22,7 +22,7 @@ import (
 
 var (
 	debug     = flag.Bool("v", false, "Enable verbose debugging output")
-	term      = flag.Bool("t", false, "Just run in the terminal (instead of an acme win)")
+	term      = flag.Bool("t", true, "Run in a terminal (deprecated, always true)")
 	exclude   = flag.String("x", "", "Exclude files and directories matching this regular expression")
 	watchPath = flag.String("p", ".", "The path to watch")
 )
@@ -75,15 +75,6 @@ func main() {
 	}
 
 	ui := ui(writerUI{os.Stdout})
-	if !*term {
-		wd, err := os.Getwd()
-		if err != nil {
-			log.Fatalln("Failed to get the current directory")
-		}
-		if ui, err = newWin(wd); err != nil {
-			log.Fatalln("Failed to open a win:", err)
-		}
-	}
 
 	if *exclude != "" {
 		var err error
