@@ -2,16 +2,6 @@
 
 
 [[projects]]
-  branch = "master"
-  name = "9fans.net/go"
-  packages = [
-    "acme",
-    "plan9",
-    "plan9/client"
-  ]
-  revision = "f3da003977a315afefd8b0085cc48356fd2308a3"
-
-[[projects]]
   name = "github.com/go-fsnotify/fsnotify"
   packages = ["."]
   revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
@@ -26,6 +16,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "43f1d21ad38ed67ce8e743e4f1ef2195a6765967f7636471774232bf75297218"
+  inputs-digest = "668f3d9cfbcea0a1293c00ed1cd32bfcffc94f1ec7a20089e566b4c67f1211fe"
   solver-name = "gps-cdcl"
   solver-version = 1
